@@ -1,46 +1,37 @@
 package edu.csumb;
 
+import java.util.HashMap;
+
 public abstract class Monster {
 
-    private String name;
-    private int hp;
-    private int maxHP;
-    private int xp = 10; // default value
+    private Integer hp;
+    private Integer xp;
+    private Integer maxHP;
+    private HashMap<String, Integer> items;
 
-    public Monster(String name, int hp, int maxHP) {
+    public Monster(Integer hp, Integer maxHP) {
     }
 
-    public String getName() {
+    public Integer getHp() {
         return null;
     }
 
-    public void setName(String name) {
+    public void setHp(Integer hp) {
     }
 
-    public int getHp() {
-        return 0;
-    }
-
-    public void setHp(int hp) {
-    }
-
-    public int getMaxHP() {
-        return 0;
-    }
-
-    public void setMaxHP(int maxHP) {
-    }
-
-    public int getXp() {
-        return 0;
-    }
-
-    public void setXp(int xp) {
-    }
-
-    @Override
-    public String toString() {
+    public Integer getXp() {
         return null;
+    }
+
+    public Integer getMaxHP() {
+        return null;
+    }
+
+    public HashMap<String, Integer> getItems() {
+        return null;
+    }
+
+    public void setItems(HashMap<String, Integer> items) {
     }
 
     @Override
@@ -51,5 +42,10 @@ public abstract class Monster {
     @Override
     public int hashCode() {
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return null;
     }
 }

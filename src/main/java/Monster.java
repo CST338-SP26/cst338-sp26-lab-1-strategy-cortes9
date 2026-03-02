@@ -10,42 +10,56 @@ public abstract class Monster {
     private HashMap<String, Integer> items;
 
     public Monster(Integer hp, Integer maxHP) {
+        this.hp = hp;
+        this.maxHP = maxHP;
+        this.xp = 10; // default xp
+        this.items = new HashMap<>();
     }
 
     public Integer getHp() {
-        return null;
+        return hp;
     }
 
     public void setHp(Integer hp) {
+        this.hp = hp;
     }
 
     public Integer getXp() {
-        return null;
+        return xp;
     }
 
     public Integer getMaxHP() {
-        return null;
+        return maxHP;
     }
 
     public HashMap<String, Integer> getItems() {
-        return null;
+        return items;
     }
 
     public void setItems(HashMap<String, Integer> items) {
+        this.items = items;
     }
 
     @Override
     public boolean equals(Object obj) {
-        return false;
+        if (obj == null) return false;
+        if (!(obj instanceof Monster)) return false;
+
+        Monster other = (Monster) obj;
+
+        return this.hp.equals(other.hp) &&
+                this.xp.equals(other.xp) &&
+                this.maxHP.equals(other.maxHP) &&
+                this.items.equals(other.items);
     }
 
     @Override
     public int hashCode() {
-        return 0;
+        return hp + xp + maxHP;
     }
 
     @Override
     public String toString() {
-        return null;
+        return "HP: " + hp + "/" + maxHP + " XP: " + xp;
     }
 }

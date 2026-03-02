@@ -8,6 +8,6 @@ public class Imp extends edu.csumb.Monster {
 
     @Override
     public String toString() {
-        return null;
+        return "Imp " + super.toString();
     }
 }

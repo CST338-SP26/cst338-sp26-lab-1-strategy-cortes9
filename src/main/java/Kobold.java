@@ -8,6 +8,6 @@ public class Kobold extends edu.csumb.Monster {
 
     @Override
     public String toString() {
-        return null;
+        return "Kobold " + super.toString();
     }
 }
